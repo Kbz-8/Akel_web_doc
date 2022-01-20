@@ -34,10 +34,9 @@ export const SIDEBAR = {
 		{ text: '', header: true },
 		{ text: 'Section Header', header: true },
 		{ text: 'Introduction', link: 'en/introduction' },
-		{ text: 'Page 2', link: 'en/page-2' },
 		{ text: 'Page 3', link: 'en/page-3' },
 
-		{ text: 'Another Section', header: true },
-		{ text: 'Page 4', link: 'en/page-4' },
+		{ text: 'Core', header: true },
+		{ text: 'JamAllocator', link: 'en/Core/jam_allocator' },
 	],
 };

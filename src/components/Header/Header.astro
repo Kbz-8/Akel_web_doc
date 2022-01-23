@@ -17,10 +17,10 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 		<div class="menu-toggle">
 			<SidebarToggle client:idle />
 		</div>
-		<div class="logo flex">
-			<AstroLogo/>
-			<a href="/">
-				<h1>Documentation</h1>
+		<div class="logo">
+			<a href="/" style="display: flex">
+				<AstroLogo size={64}/>
+				<h1 style="font-family: 'dolce_vita';">Documentation</h1>
 			</a>
 		</div>
 		<div style="flex-grow: 1;"></div>
@@ -50,7 +50,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 	.logo {
 		display: flex;
 		overflow: hidden;
-		width: 30px;
+		width: 131px;
 		font-size: 2rem;
 		flex-shrink: 0;
 		font-weight: 600;
@@ -102,6 +102,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 			width: auto;
 			margin: 0;
 			z-index: 0;
+			font-size: 2rem;
 		}
 		.menu-toggle {
 			display: none;

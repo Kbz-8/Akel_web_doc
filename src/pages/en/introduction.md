@@ -4,21 +4,31 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 
-This is the `docs` starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:
+Welcome to Akel's Documentation !
 
-- ✅ **Full Markdown support**
-- ✅ **Responsive mobile-friendly design**
-- ✅ **Sidebar navigation**
-- ✅ **Search (powered by Algolia)**
-- ✅ **Multi-language i18n**
-- ✅ **Automatic table of contents**
-- ✅ **Automatic list of contributors**
-- ✅ (and, best of all) **dark mode**
+Here you'll can find all you want to know about all the classes and functions of Akel.
+
+## Completion of documentation
+
+- ❌ **Core**
+- ✅  **Audio**
+- ❌ **Modules**
+- ✅  **Platform**
+- ❌ **Graphics**
+- ❌ **Maths**
+- ❌ **Utils**
+- ❌ **General purpose**
+- ✅ **Dark mode / Light mode**
+- ❌ **Different languages**
 
 ## Getting Started
 
-To get started with this theme, check out the `README.md` in your new project directory. It provides documentation on how to use and customize this template for your own project. Keep the README around so that you can always refer back to it as you build.
+On the left side of the page you will find the navigation bar with all the documentation pages currently online. The pages are sorted by Akel modules (such as its core, its platform module, its math module, ...  )
 
-Found a missing feature that you can't live without? Please suggest it on Discord [(#ideas-and-suggestions channel)](https://astro.build/chat) and even consider adding it yourself on GitHub! Astro is an open source project and contributions from developers like you are how we grow!
+On the right side (or on the top for phone users) of the page you will find the current content of the page and can easily navigate through it.
 
-Good luck out there, Astronaut. 🧑‍🚀
+## Updates
+
+Akel's documentation undergoes regular updates as new things come into Akel. SpinWaves tries to keep the documentation as up to date as possible, but it's a bit of a hassle to keep up with it all at the moment. So please forgive us if the documentation does not get updated right after new Akel features are released.
+
+If you wish, you are free to participate in the development of this documentation, or even of Akel if you feel like it.

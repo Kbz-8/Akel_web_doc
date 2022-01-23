@@ -1,6 +1,6 @@
 export const SITE = {
-	title: 'Your Documentation Website',
-	description: 'Your website description.',
+	title: 'Akel Documentation',
+	description: 'Akel documentation',
 	defaultLanguage: 'en_US',
 };
 
@@ -17,10 +17,10 @@ export const KNOWN_LANGUAGES = {
 };
 
 // Uncomment this to add an "Edit this page" button to every page of documentation.
-// export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/blob/main/docs/`;
+//export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/blob/main/docs/`;
 
 // Uncomment this to add an "Join our Community" button to every page of documentation.
-// export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+//export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
 
 // Uncomment this to enable site search.
 // See "Algolia" section of the README for more information.
@@ -31,12 +31,19 @@ export const KNOWN_LANGUAGES = {
 
 export const SIDEBAR = {
 	en: [
-		{ text: '', header: true },
-		{ text: 'Section Header', header: true },
+		{ text: 'General', header: true, opened: false},
 		{ text: 'Introduction', link: 'en/introduction' },
-		{ text: 'Page 3', link: 'en/page-3' },
 
-		{ text: 'Core', header: true },
+		{ text: 'Audio', header: true, opened: false},
+		{ text: 'AudioManager', link: 'en/Audio/manager' },
+
+		{ text: 'Core', header: true, opened: false},
 		{ text: 'JamAllocator', link: 'en/Core/jam_allocator' },
+		{ text: 'Logs', link: 'en/Core/logs' },
+
+		{ text: 'Platform', header: true, opened: false},
+		{ text: 'WindowComponent', link: 'en/Platform/window' },
+		{ text: 'Message Box', link: 'en/Platform/message_box' },
+		{ text: 'Inputs', link: 'en/Platform/inputs' },
 	],
 };

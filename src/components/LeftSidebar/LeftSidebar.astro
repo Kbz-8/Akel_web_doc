@@ -4,9 +4,10 @@ import { SIDEBAR } from '../../config.ts';
 const { currentPage } = Astro.props;
 const currentPageMatch = currentPage.slice(1);
 const langCode = getLanguageFromURL(currentPage);
+
 // SIDEBAR is a flat array. Group it by sections to properly render.
 const sidebarSections = SIDEBAR[langCode].reduce((col, item) => {
-	if (item.header) {
+	if(item.header) {
 		col.push({ ...item, children: [] });
 	} else {
 		col[col.length - 1].children.push(item);
@@ -17,10 +18,11 @@ const sidebarSections = SIDEBAR[langCode].reduce((col, item) => {
 
 <nav aria-labelledby="grid-left">
 	<ul class="nav-groups">
+		<div style="background-color: var(--theme-bg-table); padding:20px; border-radius: 5px">
 		{sidebarSections.map((section) => (
 			<li>
-				<div class="nav-group">
-					<h2 class="nav-group-title">{section.text}</h2>
+				<details class="nav-group" id={`${section.opened == true ? "open-me" : "close-me"}`}>
+					<summary class="nav-group-title">{section.text}</summary>
 					<ul>
 						{section.children.map((child) => (
 							<li class="nav-link">
@@ -30,19 +32,23 @@ const sidebarSections = SIDEBAR[langCode].reduce((col, item) => {
 							</li>
 						))}
 					</ul>
-				</div>
+				</details>
 			</li>
 		))}
+	</div>
 	</ul>
 </nav>
 
 <script>
 	window.addEventListener('DOMContentLoaded', (event) => {
 		var target = document.querySelector('[aria-current="page"]');
-		if (target && target.offsetTop > window.innerHeight - 100) {
+		if(target && target.offsetTop > window.innerHeight - 100) {
 			document.querySelector('.nav-groups').scrollTop = target.offsetTop;
 		}
 	});
+
+	document.getElementById("open-me").open = true;
+	document.getElementById("close-me").open = false;
 </script>
 
 <style>
@@ -53,6 +59,7 @@ const sidebarSections = SIDEBAR[langCode].reduce((col, item) => {
 	.nav-groups {
 		height: 100%;
 		padding: 2rem 0;
+		margin-top: 2rem;
 		overflow-x: visible;
 		overflow-y: auto;
 		max-height: 100vh;
@@ -78,11 +85,12 @@ const sidebarSections = SIDEBAR[langCode].reduce((col, item) => {
 		text-transform: uppercase;
 		margin-bottom: 0.5rem;
 	}
-
+	
 	.nav-link a {
 		font-size: 1rem;
 		margin: 1px;
 		padding: 0.3rem 1rem;
+		padding-left: 2rem;
 		font: inherit;
 		color: inherit;
 		text-decoration: none;
